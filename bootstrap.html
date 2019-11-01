@@ -5,60 +5,132 @@
   <title>Bootstrap Exercise</title>
 
   <!-- Load Bootstrap 4 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- Load Font Awesome -->
-    <script src="https://use.fontawesome.com/9d8d3ebd6e.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
   <!-- Load our stylesheet -->
-    <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- Code goes here. -->
+  <!-- Static navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #b7d881;">
-  <a class="navbar-brand" href="#">Ubermelon</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav mr-auto"  style="color: white;">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
-      </li>
+    <a id="ubermelon-logo" class="navbar-brand" href="#">Ubermelon</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Shop</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Favorite Melons</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Settings</a>
+        </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Shop</a>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+          <a class="nav-link" href="#">Profile</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Favorite Melons</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Settings</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Profile</a>
-        </li>
-    </ul>
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- It's container-fluid so it spans the entire page. -->
+  <div class="container-fluid">
+    <!-- Begin centered main text -->
+      <div class="row align-items-center">
+        <section class="col-6 mx-auto" id="splash">
+          <img src="melon.jpg" class="img-fluid center-block" alt="Image of melon" id="hero">
+          <p>We deliver only the highest quality domestic and exotic melons from local, independent farmers from around the world. Our melons are delivered quickly with the greatest care. We guarantee every order, every time.<p>
+        </section>
+    </div>
+    <!-- End of centered main text -->
+
+    <!-- Row for features columns -->     
+    <div class="row" id="featurerow">
+
+      <section class="col feature">
+        <i class="fas fa-trophy"></i>
+        <b>Award Winning</b>
+        <p>
+          Don't take our word for it. <br>
+          See all the awards our melons have earned.
+        </p>
+      </section>
+
+      <section class="col feature">
+        <i class="fas fa-globe"></i>
+        <b>Huge Selection</b>
+        <p>
+          We import melons from all over the world,<br> ensuring we have every melon you could possibly desire.
+        </p>
+      </section>
+
+      <section class="col feature">
+        <i class="fas fa-certificate"></i>
+        <b>Certified Sustainable</b>
+        <p>
+          Our melons are sourced only from sustainable, organic local farmers. These are the healthiest melons you'll ever eat.
+        </p>
+      </section>
+
+    </div>
+    <!-- End of three feature columns -->
+
+    <!-- Row for table -->
+    <div class="row" id="tablerow">
+
+      <section class="col-10 mx-auto d-lg-block d-md-block d-none">
+        <table class="table table-hover table-striped">
+          <thead>
+            <tr>
+                <th>Melon</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Country</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>Canteloupe</td>
+            <td>$4.99/lb</td>
+            <td>Tan</td>
+            <td>Italy</td>
+          </tr>
+          <tr>
+              <td>Honeydew</td>
+              <td>$3.99/lb</td>
+              <td>White/Green</td>
+              <td>France/Algeria</td>
+          </tr>
+          <tr>
+              <td>Casaba</td>
+              <td>$7.99/lb</td>
+              <td>Yellow</td>
+              <td>Turkey</td>
+          </tr>
+        </table>
+      </section>
+    </div> 
+    <!-- End of table row -->
   </div>
-</nav>
-
-
-
-
-
-
-
-
-
 
 
 <!-- You need this in order to use JS-based components in the 
