@@ -1,0 +1,9 @@
+/*body {
+    background-color: aqua;
+    color: white;
+}
+*/
+.navbar-nav li a{
+    color: white !important;
+}
+
